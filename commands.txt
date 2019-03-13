@@ -1,0 +1,18 @@
+Run the graphana:<br/>
+sudo docker run -d -p 3000:3000 grafana/grafana
+
+<br/>
+Run the graphite:<br/>
+sudo docker run -d\
+ --name graphite\
+ --restart=always\
+ -p 80:80\
+ -p 2003-2004:2003-2004\
+ -p 2023-2024:2023-2024\
+ -p 8125:8125/udp\
+ -p 8126:8126\
+ graphiteapp/graphite-statsd
+ 
+ URLs:<br/>
+ http://35.200.159.151/dashboard<br/>
+ http://35.200.159.151:3000
